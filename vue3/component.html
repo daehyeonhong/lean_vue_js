@@ -1,0 +1,16 @@
+<div id="app">
+    <app-header></app-header>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    Vue.createApp({
+        // InstanceOptionElement - Option API
+        components: {
+            // 'componentName': 'componentValue'
+            'app-header': {
+                template: '<h1>Component Register</h1>'
+            }
+        }
+    }).mount('#app')
+</script>
