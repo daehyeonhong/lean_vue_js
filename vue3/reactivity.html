@@ -1,0 +1,14 @@
+<div id="app"></div>
+
+<script>
+    const data = {a: 10}
+
+    const app = new Proxy(data, {
+        get() {
+            console.log('access value')
+        },
+        set() {
+            console.log('update value')
+        }
+    })
+</script>
