@@ -3,7 +3,8 @@
     <title>Hello, World!</title>
 </head>
 <div id="app">
-    <app-contents></app-contents>
+    <!--    <app-contents v-on:이벤트이름="상위 컴포넌트의 메서드 이름"></app-contents>-->
+    <app-contents v-on:refresh="showAlert"></app-contents>
 </div>
 
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -21,7 +22,13 @@
         }
     };
 
+    // Root Component
     Vue.createApp({
+        methods: {
+            showAlert() {
+                window.alert('refresh')
+            },
+        },
         components: {
             'app-contents': appContents
         }
