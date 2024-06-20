@@ -11,9 +11,7 @@
 import AppHeader from "@/components/AppHeader.vue";
 
 export default {
-  components: {
-    'app-header': AppHeader,
-  },
+  components: {AppHeader,},
   data() {
     return {
       message: 'Hello, World!'
